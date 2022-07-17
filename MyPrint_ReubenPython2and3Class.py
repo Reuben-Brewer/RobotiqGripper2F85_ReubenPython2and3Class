@@ -13,6 +13,7 @@ Verified working on: Python 2.7, 3.8 for Windows 8.1, 10 64-bit and Raspberry Pi
 
 __author__ = 'reuben.brewer'
 
+#########################################################
 import os
 import sys
 import platform
@@ -20,37 +21,38 @@ import time
 import datetime
 import traceback
 import threading
+#########################################################
 
-###############
+#########################################################
 if sys.version_info[0] < 3:
     from Tkinter import * #Python 2
     import tkFont
 else:
     from tkinter import * #Python 3
     import tkinter.font as tkFont #Python 3
-###############
+#########################################################
 
-###############
+#########################################################
 if sys.version_info[0] < 3:
     import Queue  # Python 2
 else:
     import queue as Queue  # Python 3
-###############
+#########################################################
 
-###############
+#########################################################
 if sys.version_info[0] < 3:
     from builtins import raw_input as input
 else:
     from future.builtins import input as input #"sudo pip3 install future" (Python 3) AND "sudo pip install future" (Python 2)
-###############
+#########################################################
 
-###############
+#########################################################
 import platform
 if platform.system() == "Windows":
     import ctypes
     winmm = ctypes.WinDLL('winmm')
     winmm.timeBeginPeriod(1) #Set minimum timer resolution to 1ms so that time.sleep(0.001) behaves properly.
-###############
+#########################################################
 
 ##########################################################################################################
 ##########################################################################################################
