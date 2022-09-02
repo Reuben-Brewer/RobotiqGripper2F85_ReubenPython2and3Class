@@ -12,7 +12,7 @@ www.reubotics.com
 
 Apache 2 License
 
-Software Revision A, 07/16/2022
+Software Revision B, 08/29/2022
 
 Verified working on: 
 Python 2.7, 3.8.
@@ -23,5 +23,10 @@ Raspberry Pi Buster
 ########################  
 
 ########################### Python module installation instructions, all OS's
-['ftd2xx', 'future.builtins', 'serial', 'serial.tools']
+
+RobotiqGripper2F85_ReubenPython2and3Class, ListOfModuleDependencies: ['ftd2xx', 'future.builtins', 'serial', 'serial.tools']
+RobotiqGripper2F85_ReubenPython2and3Class, ListOfModuleDependencies_TestProgram: ['MyPrint_ReubenPython2and3Class']
+RobotiqGripper2F85_ReubenPython2and3Class, ListOfModuleDependencies_NestedLayers: ['future.builtins']
+RobotiqGripper2F85_ReubenPython2and3Class, ListOfModuleDependencies_All: ['ftd2xx', 'future.builtins', 'MyPrint_ReubenPython2and3Class', 'serial', 'serial.tools']
+
 ###########################

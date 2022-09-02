@@ -6,7 +6,7 @@ reuben.brewer@gmail.com
 www.reubotics.com
 
 Apache 2 License
-Software Revision A, 07/16/2022
+Software Revision B, 08/29/2022
 
 Verified working on: Python 2.7, 3.8 for Windows 8.1, 10 64-bit and Raspberry Pi Buster (no Mac testing yet).
 '''
@@ -16,7 +16,9 @@ __author__ = 'reuben.brewer'
 #########################################################
 from RobotiqGripper2F85_ReubenPython2and3Class import *
 from MyPrint_ReubenPython2and3Class import *
+#########################################################
 
+#########################################################
 import os
 import sys
 print("Python version: " + str(sys.version))
@@ -37,13 +39,6 @@ else:
     from tkinter import * #Python 3
     import tkinter.font as tkFont #Python 3
     from tkinter import ttk
-#########################################################
-
-#########################################################
-if sys.version_info[0] < 3:
-    from builtins import raw_input as input
-else:
-    from future.builtins import input as input #"sudo pip3 install future" (Python 3) AND "sudo pip install future" (Python 2)
 #########################################################
 
 #########################################################
@@ -348,6 +343,9 @@ if __name__ == '__main__':
     global RobotiqGripper2F85_OPEN_FLAG
     RobotiqGripper2F85_OPEN_FLAG = -1
 
+    global RobotiqGripper2F85_MostRecentDict
+    RobotiqGripper2F85_MostRecentDict = dict()
+
     global RobotiqGripper2F85_MostRecentDict_SlaveIDreceivedFromGripper
     RobotiqGripper2F85_MostRecentDict_SlaveIDreceivedFromGripper = -11111
 
@@ -414,7 +412,6 @@ if __name__ == '__main__':
     if USE_RobotiqGripper2F85_FLAG == 1:
         try:
             RobotiqGripper2F85_ReubenPython2and3ClassObject = RobotiqGripper2F85_ReubenPython2and3Class(RobotiqGripper2F85_ReubenPython2and3ClassObject_setup_dict)
-            time.sleep(0.25)
             RobotiqGripper2F85_OPEN_FLAG = RobotiqGripper2F85_ReubenPython2and3ClassObject.OBJECT_CREATED_SUCCESSFULLY_FLAG
 
         except:
@@ -446,7 +443,6 @@ if __name__ == '__main__':
 
         try:
             MyPrint_ReubenPython2and3ClassObject = MyPrint_ReubenPython2and3Class(MyPrint_ReubenPython2and3ClassObject_setup_dict)
-            time.sleep(0.25)
             MYPRINT_OPEN_FLAG = MyPrint_ReubenPython2and3ClassObject.OBJECT_CREATED_SUCCESSFULLY_FLAG
 
         except:
@@ -460,8 +456,7 @@ if __name__ == '__main__':
     #################################################
     if USE_RobotiqGripper2F85_FLAG == 1 and RobotiqGripper2F85_OPEN_FLAG != 1:
         print("Failed to open RobotiqGripper2F85_ReubenPython2and3Class.")
-        input("Press any key (and enter) to exit.")
-        sys.exit()
+        ExitProgram_Callback()
     #################################################
     #################################################
 
@@ -469,8 +464,7 @@ if __name__ == '__main__':
     #################################################
     if USE_MYPRINT_FLAG == 1 and MYPRINT_OPEN_FLAG != 1:
         print("Failed to open MyPrint_ReubenPython2and3ClassObject.")
-        input("Press any key (and enter) to exit.")
-        sys.exit()
+        ExitProgram_Callback()
     #################################################
     #################################################
 
