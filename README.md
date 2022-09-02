@@ -2,7 +2,7 @@
 
 RobotiqGripper2F85_ReubenPython2and3Class
 
-Wrapper (including ability to hook to Tkinter GUI) to control Robotiq 2F85 Gripper via Serial Modbus (RS-485).
+Code (including ability to hook to Tkinter GUI) to control Robotiq 2F85 Gripper via Serial Modbus (RS-485).
 
 Reuben Brewer, Ph.D.
 
@@ -12,7 +12,7 @@ www.reubotics.com
 
 Apache 2 License
 
-Software Revision A, 07/16/2022
+Software Revision B, 08/29/2022
 
 Verified working on: 
 
@@ -28,6 +28,12 @@ Raspberry Pi Buster
 
 ########################### Python module installation instructions, all OS's
 
-['ftd2xx', 'future.builtins', 'serial', 'serial.tools']
+RobotiqGripper2F85_ReubenPython2and3Class, ListOfModuleDependencies: ['ftd2xx', 'future.builtins', 'serial', 'serial.tools']
+
+RobotiqGripper2F85_ReubenPython2and3Class, ListOfModuleDependencies_TestProgram: ['MyPrint_ReubenPython2and3Class']
+
+RobotiqGripper2F85_ReubenPython2and3Class, ListOfModuleDependencies_NestedLayers: ['future.builtins']
+
+RobotiqGripper2F85_ReubenPython2and3Class, ListOfModuleDependencies_All: ['ftd2xx', 'future.builtins', 'MyPrint_ReubenPython2and3Class', 'serial', 'serial.tools']
 
 ###########################
