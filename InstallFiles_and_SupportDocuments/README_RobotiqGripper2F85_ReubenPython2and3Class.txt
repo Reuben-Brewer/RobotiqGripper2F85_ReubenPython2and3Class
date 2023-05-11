@@ -12,7 +12,7 @@ www.reubotics.com
 
 Apache 2 License
 
-Software Revision C, 09/21/2022
+Software Revision D, 05/10/2023
 
 Verified working on: 
 Python 2.7, 3.8.
@@ -28,6 +28,8 @@ Raspberry Pi Buster
 RobotiqGripper2F85_ReubenPython2and3Class, ListOfModuleDependencies: ['ftd2xx', 'future.builtins', 'serial', 'serial.tools']
 RobotiqGripper2F85_ReubenPython2and3Class, ListOfModuleDependencies_TestProgram: ['MyPrint_ReubenPython2and3Class']
 RobotiqGripper2F85_ReubenPython2and3Class, ListOfModuleDependencies_NestedLayers: ['future.builtins']
-RobotiqGripper2F85_ReubenPython2and3Class, ListOfModuleDependencies_All: ['ftd2xx', 'future.builtins', 'MyPrint_ReubenPython2and3Class', 'serial', 'serial.tools']
+RobotiqGripper2F85_ReubenPython2and3Class, ListOfModuleDependencies_All:['ftd2xx', 'future.builtins', 'MyPrint_ReubenPython2and3Class', 'serial', 'serial.tools']
+
+Note that the code will work just fine without 'ftd2xx' but will be unable to set the Latency Timer programatically for FTDI USB-to-serial converters.
 
 ###########################
