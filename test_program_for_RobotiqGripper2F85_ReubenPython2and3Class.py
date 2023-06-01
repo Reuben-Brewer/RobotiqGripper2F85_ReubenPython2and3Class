@@ -6,7 +6,7 @@ reuben.brewer@gmail.com
 www.reubotics.com
 
 Apache 2 License
-Software Revision D, 05/10/2023
+Software Revision E, 06/01/2023
 
 Verified working on: Python 2.7, 3.8 for Windows 8.1, 10 64-bit, Ubuntu 20.04, and Raspberry Pi Buster (no Mac testing yet).
 '''
@@ -325,6 +325,24 @@ if __name__ == '__main__':
     global SINUSOIDAL_MOTION_INPUT_MaxValue_PositionControl
     SINUSOIDAL_MOTION_INPUT_MaxValue_PositionControl = 255.0
 
+    global Position_Min
+    Position_Min = 0.0
+
+    global Speed_Min
+    Speed_Min = 0.0
+
+    global Force_Min
+    Force_Min = 0.0
+
+    global Position_Max
+    Position_Max = 255.0
+
+    global Speed_Max
+    Speed_Max = 255.0
+
+    global Force_Max
+    Force_Max = 255.0
+
     global Position_Starting
     Position_Starting = int((SINUSOIDAL_MOTION_INPUT_MaxValue_PositionControl + SINUSOIDAL_MOTION_INPUT_MinValue_PositionControl)/2.0)
 
@@ -399,10 +417,16 @@ if __name__ == '__main__':
 
     global RobotiqGripper2F85_ReubenPython2and3ClassObject_setup_dict
     RobotiqGripper2F85_ReubenPython2and3ClassObject_setup_dict = dict([("GUIparametersDict", RobotiqGripper2F85_ReubenPython2and3ClassObject_GUIparametersDict),
-                                                                        ("DesiredSerialNumber", "FT2KQDVSA"), #CHANGE THIS TO MATCH YOUR UNIQUE USB-to-RS485serial converter
+                                                                        ("DesiredSerialNumber", "AM01QT67A"), #CHANGE THIS TO MATCH YOUR UNIQUE USB-to-RS485serial converter
                                                                         ("DesiredSlaveID", 9), #Gripper's default is 9
                                                                         ("NameToDisplay_UserSet", "Reuben's Test Robotiq 2F85 Gripper"),
                                                                         ("MainThread_TimeToSleepEachLoop", 0.002),
+                                                                        ("Position_Min", Position_Min),
+                                                                        ("Speed_Min", Speed_Min),
+                                                                        ("Force_Min", Force_Min),
+                                                                        ("Position_Max", Position_Max),
+                                                                        ("Speed_Max", Speed_Max),
+                                                                        ("Force_Max", Force_Max),
                                                                         ("Position_Starting", Position_Starting),
                                                                         ("Speed_Starting", Speed_Starting),
                                                                         ("Force_Starting", Force_Starting),
